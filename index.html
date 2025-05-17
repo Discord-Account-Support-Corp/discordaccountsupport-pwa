@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discord Account Support</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#5865F2" />
+</head>
+<body>
+  <h1>Welcome to Discord Account Support</h1>
+  <p>This is your PWA landing page.</p>
+  <p><a href="https://discordaccountsupportcorporation.slab.com/">Go to Slab Docs</a></p>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(console.error);
+    }
+  </script>
+</body>
+</html>
