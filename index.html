@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discord Account Support</title>
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#5865F2" />
+  <title>DASC PWA</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
 </head>
 <body>
-  <h1>Welcome to Discord Account Support</h1>
-  <p>This is your PWA landing page.</p>
- <p><a href="https://discordaccountsupportcorporation.slab.com/" rel="noopener noreferrer">Go to Slab Docs</a></p>
-<!-- iOS PWA support -->
-<link rel="apple-touch-icon" href="icons/icon-192.png" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <h1>Welcome to DASC PWA</h1>
+
+  <script>
+    // This registers the service worker so your app can cache stuff
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('Service Worker registered successfully'))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    }
+  </script>
+
+</body>
+</html>
